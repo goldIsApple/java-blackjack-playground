@@ -38,6 +38,12 @@ public class LambdaTest {
     }
 
     @Test
+    void sumAllLambda() throws Exception{
+        int sum = Lambda.sumAll(numbers, number -> number > 3);
+        assertThat(sum).isEqualTo(15);
+    }
+
+    @Test
     public void sumAllEven() throws Exception {
         int sum = Lambda.sumAllEven(numbers);
         assertThat(sum).isEqualTo(12);
